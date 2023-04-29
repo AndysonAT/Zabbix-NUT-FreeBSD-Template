@@ -2,7 +2,9 @@ Zabbix-NUT-Template for FreeBSD
 ===============================
 
 Zabbix Template for NUT(Network UPS Tools) for FreeBSD
+
 Supported UPS: http://www.networkupstools.org/stable-hcl.html
+
 
 Install
 =======
@@ -16,3 +18,5 @@ Install
 Info
 ====
 Tested on Zabbix 6.4 and Eaton UPS
+
+Origin: https://github.com/delin/Zabbix-NUT-Template
