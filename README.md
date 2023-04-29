@@ -1,29 +1,18 @@
-Zabbix-NUT-Template
-===================
+Zabbix-NUT-Template for FreeBSD
+===============================
 
-Zabbix Template for NUT(Network UPS Tools)
-
+Zabbix Template for NUT(Network UPS Tools) for FreeBSD
 Supported UPS: http://www.networkupstools.org/stable-hcl.html
 
+Install
+=======
 
-# Value mapping
+1. Copy ups_status.sh into your externalscripts folder inside your zabbix installation
+2. Add execute rights to ups_status.shfor your zabbix user (chown/chmod)
+2. Copy userparameter_nut.conf in your zabbix_agentd.d folder your zabbix installation
+3. Add read rights to userparameter_nut.conf for your zabbix user (chown/chmod)
+4. Import the zbx_import_template.yaml into your WebGUI of Zabbix (Data Collection/Templates/Import)
 
-Value mapping must be done before importing template. It can done in **Administration** / **General** / **Value mapping** (combobox on right side)
-
-Then **Create value map**
-
-	0  - unknown state
-	1  - On line (mains is present)
-	2  - On battery (mains is not present)
-	3  - Low battery
-	4  - The battery needs to be replaced
-	5  - The battery is charging
-	6  - The battery is discharging (inverter is providing load power)
-	7  - UPS bypass circuit is active echo no battery protection is available
-	8  - UPS is currently performing runtime calibration (on battery)
-	9  - UPS is offline and is not supplying power to the load
-	10 - UPS is overloaded
-	11 - UPS is trimming incoming voltage (called "buck" in some hardware)
-	12 - UPS is boosting incoming voltage
-
-![Value mapping](https://raw.githubusercontent.com/blondak/Zabbix-NUT-Template/master/Configuration%20of%20value%20mapping.png)
+Info
+====
+Tested on Zabbix 6.4 and Eaton UPS
