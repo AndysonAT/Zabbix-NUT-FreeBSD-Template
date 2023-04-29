@@ -17,6 +17,6 @@ Install
 
 Info
 ====
-Tested on Zabbix 6.4 and Eaton UPS
+Tested on FreeBSD 13.1, Zabbix 6.4 and Eaton UPS
 
 Origin: https://github.com/delin/Zabbix-NUT-Template
